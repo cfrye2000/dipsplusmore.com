@@ -13,7 +13,7 @@ $category = $this->category;
 Connie and Steven Jennings<br /> 
 317-937-5410 or
     317-205-6289<br /> 
-    <a href="mailto:www.dipsandmore@yahoo.com" class="email">www.dipsandmore@yahoo.com</a> </p> 
+    <a href="mailto:dipsandmore@yahoo.com" class="email">dipsandmore@yahoo.com</a> </p> 
 </div> 
     
 <?
