@@ -1,0 +1,402 @@
+@charset "UTF-8";
+body {
+	font-size: 12px;
+	line-height: 1.3em;
+	color: #807166;
+	font-weight: lighter;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: normal;
+	word-spacing: 1%;
+	letter-spacing: 1%;
+	background-color: #E0DECF;
+	background-repeat: no-repeat;
+}
+
+bodyhome {
+	font-size: 12px;
+	line-height: 1.2em;
+	color: #807166;
+	font-weight: lighter;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: normal;
+	word-spacing: 1%;
+	letter-spacing: 1%;
+	background-color: #E0DECF;
+	background-repeat: no-repeat;
+	
+}
+bodymustard {
+	font-size: 12px;
+	line-height: 1.2em;
+	color: #807166;
+	font-weight: lighter;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: normal;
+	word-spacing: 1%;
+	letter-spacing: 1%;
+	background-color: #FFF;
+	background-repeat: no-repeat;
+	background-image: url(images/bg_mustard.jpg);	
+}
+/* CSS Document */
+
+h1 {
+	font-size: 2.0em;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+	line-height: 1.2em;
+	color: #F30;
+	margin-bottom:-.25em;
+	
+}
+
+h2 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.3em;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 1.2em;
+	margin-bottom:-.25em;
+	margin-top: -.5em;
+	
+}
+h3 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.3em;
+	line-height: 1.2em;
+	font-weight: lighter;
+	margin-bottom:-.25em;
+	margin-top: -.75em;
+}
+
+h4 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1em;
+	line-height: 1.2em;
+	font-weight: old;
+	margin-top: 2em;
+}
+
+
+#wrapper {
+	width: 900px;
+	margin-left: auto;
+	margin-top: -40px;
+	padding-top: 20px;
+	margin-bottom: -10px;
+	margin-right: auto;
+	background-image:url("images/wrapper_bg.png");
+  
+}
+
+#wrapperhome {
+	width: 900px;
+	margin-left: auto;
+	margin-top: -40px;
+	padding-top: 20px;
+	margin-bottom: -10px;
+	margin-right: auto;
+	background-image:url("images/wrapper_bg.png");  
+  
+}
+
+
+.cell3light {
+	font-weight: normal;
+	height: 30px;
+}
+
+#content {
+	margin-left: 275px;
+	margin-top: 50px;
+	width: 500px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+#contentdips {
+	margin-left: 50px;
+	margin-top: 50px;
+	width: 820px;
+	height: 1850px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+#contentmustard {
+	margin-left: 50px;
+	margin-top: 50px;
+	width: 820px;
+	height: 500px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+#contentdesserts {
+	margin-left: 50px;
+	margin-top: 50px;
+	width: 820px;
+	height: 1070px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#contentsauce {
+	margin-left: 50px;
+	margin-top: 50px;
+	width: 820px;
+	height: 750px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#titleproduct {
+	margin-left: 0px;
+	margin-top: 0px;
+	width: 775px;
+	height:200px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-top: 10px;
+}
+
+
+#productpicture1 {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 180px;
+	height: 190px;
+	padding-left: 0px;
+	padding-right: 0px;
+	background-image: url(images/sample.jpg);
+	background-repeat: no-repeat;
+	float: left;
+	border: 1px solid #CCC;
+	font-size: 80%;
+}
+#productpicturesauce {
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 180px;
+	height: 235px;
+	padding-left: 0px;
+	padding-right: 0px;
+	background-image: url(images/sample.jpg);
+	background-repeat: no-repeat;
+	float: left;
+	border: 1px solid #CCC;
+	font-size: 80%;
+}
+
+
+#productinfo1 {
+	margin-top: 5px;
+	width: 190px;
+	height: 170px;
+	background-image: none;
+	float: left;
+	border: 1px solid #CCC;
+	padding: 10px;
+	background-color: #FFF;	
+}
+#productinfosauce {
+	margin-top: 5px;
+	width: 190px;
+	height: 215px;
+	background-image: none;
+	float: left;
+	border: 1px solid #CCC;
+	padding: 10px;
+	background-color: #FFF;	
+}
+
+#productname {
+	width: 190px;
+	padding-top: 7px;
+	padding-bottom: 5px;
+	font-size: 80%;
+	border-bottom: 1px solid #CCC;	
+}
+
+
+
+#description {
+	width: 200px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 85%;
+}
+
+
+
+#netweight {
+	height: 15px;
+	width: 190px;
+	padding-bottom: 0px;
+	font-size: 80%;	
+}
+
+#item {
+	height: 15px;
+	width: 190px;
+	font-size: 80%;
+}
+
+
+#quantity {
+	height: 15px
+	width: 190px;
+	font-size: 80%;
+	
+}
+
+
+#price {
+	height: 30px;
+	width: 190px;
+	font-size: 90%;
+}
+
+
+
+#navigation {
+	padding-right: 0px;
+	margin-top: 50px;
+	border-bottom-width: 1px;
+	border-bottom-color: #C2B8AF;
+	padding-top: 0px;
+	padding-bottom: 15px;
+	top: 0px;
+	height: 20px;
+	border-bottom-style: solid;
+	width: 800px;
+	margin-left: 50px;
+}
+
+#accountBar {
+	padding-right: 0px;
+	margin-top: 15px;
+	border-bottom-width: 1px;
+	border-bottom-color: #C2B8AF;
+	padding-top: 2px;
+	padding-bottom: 1px;
+	top: 5px;
+	height: 10px;
+	width: 800px;
+	margin-left: 50px;
+}
+
+
+#footer {
+	margin-right: auto;
+	margin-left: auto;
+	width: 800px;
+	top: 650px;
+	height: 30px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #C2B8AF;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+}
+
+.cell1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	width: 170px;
+	margin-left: -10px;
+	font-size: 100%;
+	font-style: normal;
+	font-weight: lighter;
+	height: 25px;
+}
+.title {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+	color: #B90000;
+}
+.p {
+	line-height: 1.3em;
+	margin-top: -5px;
+}
+.pbold {
+	font-weight: bold;
+	color: #F30;
+	text-decoration: none;
+}
+.link {
+	text-decoration: none;
+	color: #F30;
+}
+.pbold2 {
+	font-weight: bold;
+}
+.footer {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #807166;
+	margin-top: 15px;
+	height: 40px;
+	font-size: 80%;
+}
+.footer2 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #333;
+	margin-top: 15px;
+	height: 40px;
+	font-size: 80%;
+}
+.ph2 {
+	color: #564C45;
+}
+.cell2 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+	color: #807166;
+	height: 30px;
+}
+.cell3 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+	color: #252525;
+	height: 30px;
+	font-size: 95%;
+}
+
+
+a:hover{text-decoration:none;color:#f30;}
+    a {text-decoration:none;}
+    a {color:#807175;}
+
+.email {
+	color: #807175;
+	text-decoration: none;
+	font-weight: bold;
+	
+	
+}
+.menu_information {
+	font-weight: bold;
+	padding-top: 10px;
+	padding-left: 10px;
+	margin-left: 10px;
+	vertical-align: middle;
+	text-indent: 10px;
+}
+#footer table {
+	margin-left: -10px;
+	width: 800px;
+}
+
+
+.hi_light {
+	font-weight: normal;
+	color: #807166;
+}
+
+#contentevents {
+	margin-left: 275px;
+	margin-top: 50px;
+	width: 400px;
+	padding-left: 10px;
+	padding-right: 10px;
+}

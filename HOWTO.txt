@@ -1,0 +1,209 @@
+TO DO
+------------------
+
+
+
+HOW TO
+
+TAIL ERROR LOG
+-------------------
+tail -f /tmp/php_errors.log
+
+DREAMHOST STUFF
+-------------------
+
+ftp/ssh server = turmagar.dreamhost.com
+userid = dipsplusmore
+password = KhEa9V-G
+
+mysql -u dipsandmore -p -h mysql.dipsplusmore.com
+
+REWRITE .htaccess
+-------------------
+
+Options +FollowSymLinks 
+RewriteEngine On 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /application/index.php [L]
+
+Enable Apache Rewrite Module
+----------------------
+
+sudo a2enmod rewrite
+
+Subversion
+------------------
+
+svn checkout http://lisafrye.org/dipsandmore
+svn status
+svn commit -m message
+
+
+Apache
+---------------------
+
+sudo /etc/init.d/apache2 restart
+
+
+MySQL
+-----------------------
+mysql -u root -p <same>
+
+#
+# Connect to the local database server as user root
+# You will be prompted for a password.
+#
+mysql -h localhost  -u root -p
+
+#
+# Now we see the 'mysql>' prompt and we can run
+# the following to create a new database for Paul.
+#
+mysql> create database pauldb;
+Query OK, 1 row affected (0.00 sec)
+
+#
+# Now we create the user paul and give him full 
+# permissions on the new database
+mysql> grant CREATE,INSERT,DELETE,UPDATE,SELECT on pauldb.* to paul@localhost;
+Query OK, 0 rows affected (0.00 sec)
+
+#
+# Next we set a password for this new user
+#
+mysql> set password for paul = password('mysecretpassword');
+Query OK, 0 rows affected (0.00 sec)
+
+#
+# Cleanup and ext
+mysql> flush privileges;
+mysql> exit;
+
+
+CREATE TABLE `events` (
+  `eventid` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `description` text NOT NULL,
+  `startdatetime` datetime NOT NULL,
+  `enddatetime` datetime NOT NULL,
+  `locationname` varchar(30) NOT NULL,
+  `address` varchar(30) NOT NULL,
+  `city` varchar(30) NOT NULL,
+  `state` varchar(2) NOT NULL,
+  `zipcode` varchar(5) NOT NULL,
+  `phone` varchar(15) NOT NULL,
+  `isvisible` int(11) DEFAULT NULL,
+  PRIMARY KEY (`eventid`)
+) ENGINE=MyISAM AUTO_INCREMENT=132 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `productid` varchar(30) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `description` text NOT NULL,
+  `ingredients` text NOT NULL,
+  `price` decimal(7,2) NOT NULL,
+  `weight` varchar(30) NOT NULL,
+  `category` int(11) NOT NULL,
+  `isvisible` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=132 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `description` text NOT NULL,
+  `isvisible` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=132 DEFAULT CHARSET=latin1;
+
+DESC events;
+
++---------------+-------------+------+-----+---------+----------------+
+| Field         | Type        | Null | Key | Default | Extra          |
++---------------+-------------+------+-----+---------+----------------+
+| eventid       | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name          | varchar(30) | NO   |     | NULL    |                |
+| description   | text        | NO   |     | NULL    |                |
+| startdatetime | datetime    | NO   |     | NULL    |                |
+| enddatetime   | datetime    | NO   |     | NULL    |                |
+| locationname  | varchar(30) | NO   |     | NULL    |                |
+| address       | varchar(30) | NO   |     | NULL    |                |
+| city          | varchar(30) | NO   |     | NULL    |                |
+| state         | varchar(2)  | NO   |     | NULL    |                |
+| zipcode       | varchar(5)  | NO   |     | NULL    |                |
+| phone         | varchar(15) | NO   |     | NULL    |                |
+| isvisible     | int(11)     | YES  |     | NULL    |                |
++---------------+-------------+------+-----+---------+----------------+
+
+
+
+
+PHPUnit
+---------------------
+
+/tests$ phpunit DemoTest
+
+
+
+Loading Event Data
+----------------------------
+
+INSERT INTO events (name, address, city, description, enddatetime, locationname, phone, startdatetime, state, isvisible, zipcode) VALUES ('Stewart Promotion Flea Market', '', 'Indianapolis', '', '2010-11-7', '', '', '2010-11-5', 'IN', 1, '');
+
+INSERT INTO events (name, address, city, description, enddatetime, locationname, phone, startdatetime, state, isvisible, zipcode) VALUES ('Christmas Toy Show', '', 'Indianapolis', '', '2010-11-14', '', '', '2010-11-10', 'IN', 1, '');
+
+INSERT INTO events (name, address, city, description, enddatetime, locationname, phone, startdatetime, state, isvisible, zipcode) VALUES ('Winter Fair', '', 'Cincinnati', '', '2010-11-28', '', '', '2010-11-26', 'OH', 1, '');
+
+INSERT INTO events (name, address, city, description, enddatetime, locationname, phone, startdatetime, state, isvisible, zipcode) VALUES ('Stewart Promotion Flea Market', '', 'Indianapolis', '', '2010-11-28', '', '', '2010-11-26', 'IN', 1, '');
+
+INSERT INTO events (name, address, city, description, enddatetime, locationname, phone, startdatetime, state, isvisible, zipcode) VALUES ('Winter Fair', '', 'Columbus', '', '2010-12-5', '', '', '2010-12-3', 'OH', 1, '');
+
+INSERT INTO events (name, address, city, description, enddatetime, locationname, phone, startdatetime, state, isvisible, zipcode) VALUES ('Giant Knife Show', '', 'Louisville', '', '2010-12-31', '', '', '2010-12-30', 'KY', 1, '');
+
+INSERT INTO events (name, address, city, description, enddatetime, locationname, phone, startdatetime, state, isvisible, zipcode) VALUES ('Stewart Promotion Flea Market', '', 'Louisville', '', '2010-12-31', '', '', '2010-12-30', 'KY', 1, '');
+
+INSERT INTO events (name, address, city, description, enddatetime, locationname, phone, startdatetime, state, isvisible, zipcode) VALUES ('Giant Knife Show', '', 'Louisville', '', '2011-1-1', '', '', '2011-1-1', 'KY', 1, '');
+
+INSERT INTO events (name, address, city, description, enddatetime, locationname, phone, startdatetime, state, isvisible, zipcode) VALUES ('Stewart Promotion Flea Market', '', 'Louisville', '', '2011-1-1', '', '', '2011-1-1', 'KY', 1, '');
+
+INSERT INTO events (name, address, city, description, enddatetime, locationname, phone, startdatetime, state, isvisible, zipcode) VALUES ('Build and Landscape Show', '', 'Louisville', '', '2011-1-16', '', '', '2011-1-14', 'KY', 1, '');
+
+January 2011
+
+21st-23rd Trader Garage Sale Indianapolis, IN. 
+21st-23rd Sharonville, OH Home Show Convention Center
+26th-30th Louisville, KY. Boat and RV Show
+28th-31st Indianapolis, IN. Home Show
+ 
+February 2011
+1st-6th Indianapolis, IN. Home Show
+12th-20 Detroit, MI. Boat Show
+18th-27th Indianapolis, IN. Boat & Travel
+25th-27th Indianapolis, IN. Home & Garden Show at Convention Center
+ 
+March 2011
+4th-6th Home & Flower
+17th-20th Spring Boating Expo. Detroit, MI.
+ 
+April 2011
+1st-3rd Hoosier Horse Fair & Expo.
+
+
+
+COUCHDB
+
+sudo /etc/init.d/couchdb restart
+
+curl -H "Content-Type: application/json" -X POST http://cfrye.cb.crateandbarrel.com:5984/_replicate -d '{"source":"skus","target":"http://cfrye:fatso@frye.couchone.com/skus"}'
+
+
+curl -X PUT http://cfrye:fatso@frye.couchone.com/skus/1 -d '{"title":"There is Nothing Left to Lose","artist":"Foo Fighters"}'
+
+curl -X GET http://cfrye:fatso@frye.couchone.com/products/_design/dipsplusmore/_view/get_all?key=%22Item4321%22
+
+ curl -X GET 'http://cfrye:fatso@frye.couchone.com/products/_design/dipsplusmore/_view/get_all_by_category?startkey="6f2c45bc77261bc0e2b8f420b50190721"&endkey="6f2c45bc77261bc0e2b8f420b50190722"'
+
+
+curl -X GET http://cfrye:fatso@frye.couchone.com/carts/_design/dipsplusmore/_view/get_all?key=%22admin%22
